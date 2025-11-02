@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>本の追加</title>
+</head>
+<body>
+<h2>本の追加</h2>
+
+<form action="/books/add" method="post">
+    <label>タイトル：</label>
+    <input type="text" name="title" required><br><br>
+
+    <label>著者：</label>
+    <input type="text" name="author" required><br><br>
+
+    <button type="submit">追加</button>
+</form>
+
+<p><a href="/books">一覧に戻る</a></p>
+</body>
+</html>

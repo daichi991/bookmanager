@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>本の一覧</title>
+</head>
+<body>
+<h1>登録済みの本の一覧</h1>
+
+<p th:if="${books == null or #lists.isEmpty(books)}">
+    まだ本が登録されていません。
+</p>
+
+<ul th:if="${books != null}">
+    <li th:each="book : ${books}">
+        <span th:text="${book.title}">タイトル</span> -
+        <span th:text="${book.author}">著者</span>
+    </li>
+</ul>
+
+<p><a href="/books/form">新しい本を追加する</a></p>
+
+</body>
+</html>
